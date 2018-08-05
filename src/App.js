@@ -4,75 +4,11 @@ import untitled8 from './assets/Works/Ashokan/untitled8.jpg'
 import NR_Boswijck_01 from './assets/Works/Boswijck/NR_Boswijck_01.jpg'
 import Automonuments09 from './assets/Works/Automonuments/Automonuments09.jpg'
 import C8B0135_Zabutinsky from './assets/Works/TLV/C8B0135_Zabutinsky.jpg'
-import $ from "jquery";
-import {TweenMax, Power3} from "gsap/all";
 
-var $colorOverlay = $('.color-overlay');
-var $whiteOverlay = $('.white-overlay');
-var isAnimated = false;
 
 
 class App extends Component {
-  
-  constructor(props) {
-    
-    super(props);
-    this.state = {
-      isAnimated: false,
-      $colorOverlay: $('.color-overlay'),
-      $whiteOverlay: $('.white-overlay'),
-      
-    };
-  }
-
-showImage() {
-    if (isAnimated) {
-        TweenMax.killAll();
-        $whiteOverlay[0].style.transformOrigin = "left 50% 0px";
-        isAnimated = false;
-    } else {
-        isAnimated = true;
-    }
-    
-    TweenMax.to($whiteOverlay, 1, 
-        {scaleX: 0, ease:Power3.easeInOut}
-    );
-    TweenMax.fromTo($colorOverlay, 1, 
-        {scaleX: 1},
-        {scaleX: 0, ease:Power3.easeInOut, delay: 0.2, onComplete: function() {
-            $whiteOverlay[0].style.transformOrigin = "left 50% 0px";
-            isAnimated = false;
-        }}
-    );
-}
-
-hideImage() {
-    if (isAnimated) {
-        TweenMax.killAll();
-        isAnimated = false;
-        $whiteOverlay[0].style.transformOrigin = "right";
-    } else {
-       isAnimated = true;
-    }
-
-    TweenMax.to($whiteOverlay, 0.5, {
-        scaleX: 1, 
-        ease:Power3.easeInOut,
-        onComplete: function() {
-            $whiteOverlay[0].style.transformOrigin = "right";
-            isAnimated = false;
-        }
-    });
-}
-
-
-
-
-
   render() {
-
-   
-  
     return (
       
       <div className="App">
@@ -84,7 +20,7 @@ hideImage() {
       </div>
      
       <div id="columnGrid" className="container-fluid text-center">
-  <div id="homeColumns" className="row  ">
+  <div id="homeColumns" className="row">
     <div id="fineArtMain">
      <h1 id="fineArtsub" className="mx-auto">FINE ART</h1>
      <h1 id="fineArtHover" className="mx-auto">FINE ART HOVER</h1>
@@ -93,8 +29,10 @@ hideImage() {
     <div className="col">
     <h1 className="mx-auto">+</h1>
     </div>
-    <div id="commercialMain" className="col">
+    <div id="commercialMain">
     <h1 id="commercialSub" className="mx-auto">COMMERCIAL</h1>
+    <h1 id="commercialHover" className="mx-auto">COMMERCIAL HOVER</h1>
+
     </div>
   </div>
   </div>

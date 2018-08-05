@@ -268,13 +268,13 @@ font-family: 'Quicksand', sans-serif;
 }
 #fineArtMain #fineArtsub {
   opacity: 1;
-  transform: translateX(45px);
-  transition: opacity 0.5s , transform 0.5s 0.5s;
+  transform: translateX(190px);
+  transition: opacity 0.5s 0.2s, transform 0.8s ;
 }
 #fineArtMain #fineArtHover {
   opacity: 0;
-  transform: translateX(500px);
-  transition: opacity 0.3s, transform 0.5s 1s;
+  transform: translateX(-900px);
+  transition: opacity 0.3s, transform 0.5s 0.3s;
 }
 #fineArtMain:hover {
   width: 60%;
@@ -283,136 +283,53 @@ font-family: 'Quicksand', sans-serif;
 }
 #fineArtMain:hover #fineArtsub {
   opacity: 0;
-  transform: translateX(-100px);
+  transform: translateX(420px);
 }
 #fineArtMain:hover #fineArtHover {
   opacity: 1;
-  transform: translateX(-100px);
+  transform: translateX(-10px);
 }
 
+/* COMMERCIAL HOVER */
+/* COMMERCIAL HOVER */
+/* COMMERCIAL HOVER */
+/* COMMERCIAL HOVER */
+/* COMMERCIAL HOVER */
 
-/* #homeColumns{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #333;
-}
-
-#fineArtMain{
+#commercialMain {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 150px;
-  height: 150px;
+  width: 33%;
+  height: 600px;
   background-color: red;
   color: white;
   box-shadow: 5px 5px 25px #000;
   overflow: hidden;
   white-space: nowrap;
   cursor: pointer;
-  transition: 
-    all 1s;
+  transition: all 1s;
 }
-#fineArtsub {
+#commercialMain #commercialSub {
   opacity: 1;
   transform: translateX(45px);
-  transition:
-    opacity 0.5s 2s,
-    transform 0.5s 0.5s;
+  transition: opacity 0.5s 0.2s, transform 0.5s 0.5s;
 }
-
-#fineArtHover{
+#commercialMain #commercialHover {
   opacity: 0;
   transform: translateX(500px);
-  transition: 
-    opacity 0.5s 1s,
-    transform 0.5s 1s;
+  transition: opacity 0.3s, transform 0.5s 0.3s;
 }
-
-#fineArtMain:hover {
-  width: 800px;
+#commercialMain:hover {
+  width: 60%;
   background-color: orange;
   box-shadow: -5px 5px 25px #000;
 }
-
-#fineArtsub:hover {
+#commercialMain:hover #commercialSub {
   opacity: 0;
-  transform: translateX(-500px);
+  transform: translateX(70px);
 }
-#fineArtHover:hover {
+#commercialMain:hover #commercialHover {
   opacity: 1;
-  transform: translateX(-100px);
-} */
-/* 
-#fineArtMain{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 600px;
-  height: 600px;
-  background-color: green;
-  color: black;
-  overflow: hidden;
-  white-space: nowrap;
-  cursor: pointer;
-  transition:  all 1s;
+  transform: translateX(-350px);
 }
-
-#commercialMain{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 600px;
-  height: 600px;
-  background-color: white;
-  color: black;
-  overflow: hidden;
-  white-space: nowrap;
-  cursor: pointer;
-  transition:  all 1s;
-}
-
-#commercialSub {
-  opacity: 1;
-  transform: translateX(45px);
-  transition:
-    opacity 0.5s 2s,
-    transform 0.5s 0.5s;
-}
-
-#fineArtsub {
-  opacity: 1;
-  transform: translateX(45px);
-  transition:
-    opacity 0.5s 2s,
-    transform 0.5s 0.5s;
-}
-#fineArtMain:hover {
-  width: 600px;
-  background-color: black;
-}
-
-#commercialMain:hover{
-  width: 300px;
-  background-color: black;
-}
-  #fineArtsub:hover {
-    opacity: 0;
-    transform: translateX(-500px);
-  }
-
-  #commercialSub:hover{
-    opacity: 1;
-    transform: translateX(-500px);
-
-  }
-  #fineArtHover:hover {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  
-  #commercialHover:hover {
-    opacity: 1;
-    transform: translateX(-100px);
-  } */
-
