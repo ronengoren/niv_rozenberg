@@ -245,6 +245,8 @@ margin-bottom: 30px;
   opacity: 1;
 }
 
+
+
 #columnGrid {
   height: 100%;
   /* display: flex;
@@ -266,7 +268,7 @@ margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 20%;
   height: 100px;
   color: black;
   overflow: hidden;
@@ -277,12 +279,14 @@ margin-bottom: 30px;
 
 #fineArtsub{
   font-size: 50px;
-  margin: 30px;
+  width: 30%;
+
+
 }
 
 #fineArtMain #fineArtsub {
   opacity: 1;
-  /* transform: translateX(140px); */
+  /* transform: translateY(100px); */
   transition: opacity 0.5s 0.2s, transform 0.8s ;
 }
 #fineArtHover {
@@ -300,16 +304,17 @@ margin-bottom: 30px;
   cursor: pointer;
 
 }
- #fineArtMain:hover #fineArtsub {
+ #fineArtsub:hover {
   opacity: 0;
   transform: translateY(420px);
   
 }
-/* #fineArtMain:hover #fineArtHover {
+#fineArtsub:hover #fineArtHover {
+  color:white;
   opacity: 1;
   transform: translateX(-100px);
   
-} */
+}
 
 /* COMMERCIAL HOVER */
 /* COMMERCIAL HOVER */
@@ -321,7 +326,7 @@ margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 30%;
   height: 100px;
   color: black;
   overflow: hidden;
@@ -332,12 +337,16 @@ margin-bottom: 30px;
 
 #commercialSub{
   font-size: 50px;
-  margin: 30px;
+  width: 30%;
+
+
 }
+
+
 
 #commercialMain #commercialSub {
   opacity: 1;
-  /* transform: translateX(140px); */
+  /* transform: translateY(100px); */
   transition: opacity 0.5s 0.2s, transform 0.8s ;
 }
 #commerciaHover {
@@ -355,9 +364,15 @@ margin-bottom: 30px;
   cursor: pointer;
 
 }
- #commercialMain:hover #commercialSub {
+ #commercialSub:hover {
   opacity: 0;
   transform: translateY(420px);
+  
+}
+#commercialSub:hover #commerciaHover {
+  color:white;
+  opacity: 1;
+  transform: translateX(-100px);
   
 }
 
@@ -371,7 +386,6 @@ margin-bottom: 30px;
  /* padding-right: 50px;
  padding-left: 50px;
  transform: translateX(-20px); */
- margin: 30px;
+ margin: 40px;
 }
-
 
