@@ -390,3 +390,8 @@ margin-bottom: 30px;
  margin: 40px;
 }
 
+@media only screen and (max-width: 480px)  {
+  h1 {
+      font-size: 18px;
+  }
+}

@@ -22,8 +22,8 @@ class App extends Component {
       <div id="columnGrid" className="container ">
   <div id="homeColumns" className="row ">
     <div id="HoverMain" className="col-12 ">
-    <div id="fineArtMain" className="mx-auto" aria-haspopup="true">
-     <h1 id="fineArtsub" onclick="" className="text-center" aria-haspopup="true">FINE ART</h1>
+    <div id="fineArtMain" onclick="" className="mx-auto" aria-haspopup="true">
+     <h1 id="fineArtsub"  className="text-center" aria-haspopup="true">FINE ART</h1>
      <span id="fineArtHover" className="text-center">hover box</span>
 
      {/* <h1 id="commercialSubFineArt" className="mx-auto">COMMERCIAL SubFineArt</h1> */}
