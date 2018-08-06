@@ -295,7 +295,7 @@ margin-bottom: 30px;
   transition: opacity 0.3s, transform 0.5s 0.3s;
   
 }
- #fineArtMain:hover {
+ #fineArtMain:hover  {
   width: 100%;
   height: 600px;
   background-color: black;
@@ -304,7 +304,7 @@ margin-bottom: 30px;
   cursor: pointer;
 
 }
- #fineArtsub:hover {
+ #fineArtsub:hover #fineArtMain:focus #fineArtMain:active{
   opacity: 0;
   transform: translateY(420px);
   
