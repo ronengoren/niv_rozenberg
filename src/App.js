@@ -19,19 +19,29 @@ class App extends Component {
 </div>
       </div>
      
-      <div id="columnGrid" className="container-fluid text-center">
-  <div id="homeColumns" className="row">
-    <div id="fineArtMain">
+      <div id="columnGrid" className="container">
+  <div id="homeColumns" className="row align-items-center">
+    <div 
+    id="HoverMain" 
+    className="col align-self-center"
+    >
+    <div id="fineArtMain" className="text-center">
      <h1 id="fineArtsub" className="mx-auto">FINE ART</h1>
-     <h1 id="fineArtHover" className="mx-auto">FINE ART HOVER</h1>
+     {/* <h1 id="commercialSubFineArt" className="mx-auto">COMMERCIAL SubFineArt</h1> */}
+     </div>
+     <span id="fineArtHover" className="mx-auto">hover box</span>
 
-    </div>
-    <div className="col">
-    <h1 className="mx-auto">+</h1>
-    </div>
-    <div id="commercialMain">
+    {/* </div> */}
+    {/* <div id="addSign" className="col-{breakpoint}-auto"> */}
+    <h1 className="text-center" id="addSign">+</h1>
+    {/* </div> */}
+    <div id="commercialMain" className="text-center">
+
     <h1 id="commercialSub" className="mx-auto">COMMERCIAL</h1>
-    <h1 id="commercialHover" className="mx-auto">COMMERCIAL HOVER</h1>
+    {/* <h1 id="commercialHover" className="mx-auto">COMMERCIAL HOVER</h1> */}
+
+</div>
+<span id="commerciaHover" className="mx-auto">hover box commercial</span>
 
     </div>
   </div>
