@@ -304,7 +304,7 @@ margin-bottom: 30px;
   cursor: pointer;
 
 }
- #fineArtsub:hover #fineArtMain:focus #fineArtMain:active{
+ #fineArtsub:hover #fineArtsub:focus #fineArtsub:active{
   opacity: 0;
   transform: translateY(420px);
   
@@ -390,8 +390,3 @@ margin-bottom: 30px;
  margin: 40px;
 }
 
-@media only screen and (max-width: 480px)  {
-  h1 {
-      font-size: 18px;
-  }
-}
