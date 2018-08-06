@@ -37,7 +37,7 @@ class App extends Component {
 
     <h1 id="commercialSub" className="text-center">COMMERCIAL</h1>
     {/* <h1 id="commercialHover" className="mx-auto">COMMERCIAL HOVER</h1> */}
-    <span id="commerciaHover" className="text-center">hover box commercial</span>
+    <span id="commerciaHover" className="text-center">hover box</span>
 
 </div>
 
