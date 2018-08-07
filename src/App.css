@@ -17,6 +17,12 @@ margin-bottom: 30px;
 
 }
 
+#photographer{
+  margin-bottom: 150px;
+  font-size: 15px;
+}
+
+
 #columnGrid{
   color: black;
   font-family: 'Quicksand', sans-serif;
@@ -283,6 +289,7 @@ margin-bottom: 30px;
   width: 30%;
   margin-top: 30px;
   cursor: pointer;
+
 }
 
 
@@ -296,11 +303,20 @@ margin-bottom: 30px;
 }
 #fineArtHover {
   opacity: 0;
-  transform: translateX(-200px);
+  transform: translateX(0px);
   transition: opacity 0.3s, transform 0.5s 0.3s;
   color:yellow;
   font-size: 3.3vw;
   cursor: pointer;
+  width: 230%;
+  height: 100%;
+  overflow-y: scroll;
+  text-align: center;
+  display: block;
+  scroll-behavior: smooth;
+  background-color: black;
+  white-space: normal;
+
 
   
 }
@@ -336,6 +352,11 @@ margin-bottom: 30px;
 }
 
 /* COMMERCIAL HOVER */
+/* COMMERCIAL HOVER */
+/* COMMERCIAL HOVER */
+/* COMMERCIAL HOVER */
+
+
 
 #commercialMain {
   display: flex;
@@ -344,52 +365,65 @@ margin-bottom: 30px;
   width: 50%;
   height: 100px;
   color: black;
+  overflow: hidden;
+  white-space: nowrap;
   cursor: pointer;
   transition: all 1s;
-  white-space: nowrap;
-
-
   
 }
+
 #commercialSub{
   font-size: 3.3vw;
-  width: 10%;
+  width: 30%;
   margin-top: 30px;
   cursor: pointer;
 }
+
+
+
+
 #commercialMain #commercialSub {
   opacity: 1;
-  /* transform: translateX(50px); */
+  transform: translateX(-40px);
   transition: opacity 0.5s 0.2s, transform 0.8s ;
   cursor: pointer;
 }
 #commerciaHover {
   opacity: 0;
-  transform: translateX(-150px);
+  transform: translateX(0px);
   transition: opacity 0.3s, transform 0.5s 0.3s;
+  color:yellow;
   font-size: 3.3vw;
   cursor: pointer;
+  width: 230%;
+  height: 100%;
+  overflow-y: scroll;
+  text-align: center;
+  display: block;
+  scroll-behavior: smooth;
+  background-color: black;
 
   
 }
- #commercialMain:hover  {
+ #commercialMain:hover {
   width: 100%;
   height: 600px;
-  background-color: red;
+  background-color: yellowgreen;
   box-shadow: -5px 5px 25px #000;
   color: white;
+  
   cursor: pointer;
+  margin-left: 400px;
   cursor: pointer;
 
 }
 
 #commercialMain:hover  #commerciaHover{
   opacity: 1;
-  color: green;
   cursor: pointer;
 
 }
- /* #commercialSub:hover{
+ /* #commercialSub:hover {
   opacity: 0;
   transform: translateY(420px);
   
@@ -397,12 +431,10 @@ margin-bottom: 30px;
 #commercialSub:hover #commerciaHover {
   color:white;
   opacity: 1;
-  transform: translateX(-200px);
+  transform: translateX(-100px);
   cursor: pointer;
-  margin-left: 200px;
   
 }
-
 
 .thumbGrid{
 
@@ -417,6 +449,8 @@ margin-bottom: 30px;
  font-size: 3.3vw;
 
 }
+
+
 
 @media only screen and (max-width: 480px)  {
   #addSign{
@@ -450,13 +484,18 @@ margin-bottom: 30px;
 
   }
   #commerciaHover{
+    display: flex;
+    align-items: center;
     font-size: 7.3vw;
-    margin-left: 100px;
+    width: 400px;
 
   }
   #fineArtHover{
+    display: flex;
+    align-items: center;
     font-size: 7.3vw;
-    margin-left: 180px;
+    width: 400px;
+    /* margin-left: 180px; */
 
   }
 
@@ -473,11 +512,10 @@ margin-bottom: 30px;
   }
 
   #commercialSub {
-    display: flex;
     font-size: 3.3vw;
-    justify-content: right;
-    margin-left: 130px;
+    margin-left: 175px;
     width: 100%;
+    display: flex;
 
     
   }

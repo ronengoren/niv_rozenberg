@@ -4,7 +4,8 @@ import untitled8 from './assets/Works/Ashokan/untitled8.jpg'
 import NR_Boswijck_01 from './assets/Works/Boswijck/NR_Boswijck_01.jpg'
 import Automonuments09 from './assets/Works/Automonuments/Automonuments09.jpg'
 import C8B0135_Zabutinsky from './assets/Works/TLV/C8B0135_Zabutinsky.jpg'
-
+import FineArt from './components/FineArt'
+import Commercial from './components/Commercial'
 
 
 class App extends Component {
@@ -15,7 +16,9 @@ class App extends Component {
       <div className="container">
 
 <div className="Navbar">
-<p className="text-center">NIV.ROZENBERG</p>
+<h1 className="text-center">NIV.ROZENBERG</h1>
+<p id="photographer" className="text-center">PHOTOGRAPHER</p>
+
 </div>
       </div>
      
@@ -24,7 +27,9 @@ class App extends Component {
     <div id="HoverMain" className="col-12 ">
     <div id="fineArtMain" className="mx-auto">
      <h1 id="fineArtsub"  className="text-center">FINE ART</h1>
-     <span id="fineArtHover" className="text-center">hover box</span>
+     <span id="fineArtHover" className="text-center">
+     <FineArt />
+     </span>
 
      {/* <h1 id="commercialSubFineArt" className="mx-auto">COMMERCIAL SubFineArt</h1> */}
      </div>
@@ -36,8 +41,9 @@ class App extends Component {
     <div id="commercialMain" className="mx-auto">
 
     <h1 id="commercialSub" className="text-center">COMMERCIAL</h1>
-    {/* <h1 id="commercialHover" className="mx-auto">COMMERCIAL HOVER</h1> */}
-    <span id="commerciaHover" className="text-center">hover box</span>
+    <span id="commerciaHover" className="text-center">
+    <Commercial />
+    </span>
 
 </div>
 
