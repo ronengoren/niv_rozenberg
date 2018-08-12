@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import './FineArt.css';
-import untitled8 from '../assets/Works/Ashokan/untitled8.jpg'
-import { Modal, ModalBody, ModalFooter } from 'reactstrap';
+import untitled24 from '../assets/Works/Ashokan/untitled24.jpg'
+import Automonuments08 from '../assets/Works/Automonuments/Automonuments08.jpg'
+
+// import NR_Boswijck_01 from '../assets/Works/Boswijck/NR_Boswijck_01.jpg'
+// import C8B0135_Zabutinsky from '../assets/Works/TLV/C8B0135_Zabutinsky.jpg'
+// import untitled8 from '../assets/Works/Ashokan/untitled8.jpg'
+
 
 
 
@@ -23,37 +28,32 @@ class FineArt extends Component {
   render() {
       return(
           <div id="fineArtMaincontainer" className="container">
-         
-  {/* <div className="hero">
-  
-    <p className="logo">Bill Murray</p>
-   
-  </div> */}
   <section id="content" className="container"> 
   <div id="mediaContent" className="media">
-  <img  onClick={this.toggle} id="fineArtImage1"  src={untitled8} alt="placeholder"/>      
+  <img  onClick={this.toggle} id="fineArtImage1" src={untitled24} alt="untitled24" className="align-self-start mr-3"/>      
   <div  id="mediaBody" className="media-body">
   <h5 id="fineArtTitle1" className="mt-0">Ashokan</h5>
   <p id="fineArtText1" className="text-justify">Cras sit amet nibh libero, in gravide um in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
        
 
-        <div className="container">
-        <Modal  id="modal" isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalBody id="modalBody">
-          <img id="fineArtImage1Modal" className="img-fluid" src={untitled8} alt="ResponsiveImage"/>          </ModalBody>
-          <ModalFooter>
-          <h1> Ashokan </h1>
-          </ModalFooter>
-        </Modal>
         </div>
-     
+</div>
+  </section>
+
+  <section id="content2" className="container"> 
+  <div id="mediaContent2" className="media">
+  <div  id="mediaBody2" className="media-body">
+  <h5 id="fineArtTitle2" className="mt-0">Automonuments</h5>
+  <p id="fineArtText2" className="text-justify">Cras sit amet nibh libero, in gravide um in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
         </div>
+        <img  onClick={this.toggle} id="fineArtImage2"  src={Automonuments08} alt="Automonuments08"/>      
+
 </div>
 
 
 
   </section>
-
+  
           </div>
       )
   }

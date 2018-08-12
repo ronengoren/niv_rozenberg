@@ -17,6 +17,11 @@ margin-bottom: 30px;
 
 }
 
+#nivRozenberg{
+  text-decoration: none;
+  color:black;
+}
+
 #photographer{
   margin-bottom: 150px;
   font-size: 15px;
@@ -306,7 +311,6 @@ margin-bottom: 30px;
   transform: translateX(0px);
   transition: opacity 0.3s, transform 0.5s 0.3s;
   color:yellow;
-  font-size: 3.3vw;
   cursor: pointer;
   width: 230%;
   height: 100%;
