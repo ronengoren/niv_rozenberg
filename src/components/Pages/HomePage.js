@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import '../../../src/App.css'
 // import untitled8 from '../assets/Works/Ashokan/untitled8.jpg'
-import NR_Boswijck_01 from '../../assets/Works/Boswijck/NR_Boswijck_01.jpg'
-import Automonuments09 from '../../assets/Works/Automonuments/Automonuments09.jpg'
-import C8B0135_Zabutinsky from '../../assets/Works/TLV/C8B0135_Zabutinsky.jpg'
+// import NR_Boswijck_01 from '../../assets/Works/Boswijck/NR_Boswijck_01.jpg'
+// import Automonuments09 from '../../assets/Works/Automonuments/Automonuments09.jpg'
+// import C8B0135_Zabutinsky from '../../assets/Works/TLV/C8B0135_Zabutinsky.jpg'
 // import FineArt from '../../components/FineArt'
 // import Commercial from '../../components/Commercial'
 // import AutomonumentsPage from './components/Pages/AutomonumentsPage'
-import untitled8 from '../../assets/Works/Ashokan/untitled8.jpg'
+// import untitled8 from '../../assets/Works/Ashokan/untitled8.jpg'
 import MainGallery from './MainGallery'
 // import AshokanCarousels from '../Carousels/AshokanCarousels'
 
 import {
     BrowserRouter as 
-    // Router,
-    // Route,
+    Router,
+    Route,
     Link
   } from 'react-router-dom'
 
@@ -23,9 +23,12 @@ class HomePage extends Component {
     return (
      
       <div className="App">
+            <Link to={"/FineArt"} id="FineArtLink">FINE ART</Link>
+
       <div className="container">
 
 <MainGallery />
+
       </div>
      
       {/* <div id="columnGrid" className="container "> */}
@@ -57,7 +60,7 @@ class HomePage extends Component {
   {/* </div> */}
   {/* </div> */}
 
-  <div className="container">
+  {/* <div className="container">
 
   <div className="thumbGrid">
   <figure className="snip1572">
@@ -72,9 +75,9 @@ class HomePage extends Component {
   <figcaption>
     <h3>Automonuments</h3>
   </figcaption>
-  <Link to={`FineArt/Automonuments/`}></Link>
+  <Link to={`FineArt/Automonuments/`}></Link> */}
   {/* <a href="/"> </a> */}
-</figure>
+{/* </figure>
 <figure className="snip1572">
   <img src={NR_Boswijck_01} alt="Boswijck" />
   <figcaption>
@@ -140,7 +143,7 @@ class HomePage extends Component {
 </div>
 
 </div>
-</div>
+</div> */}
 </div>
     );
   }

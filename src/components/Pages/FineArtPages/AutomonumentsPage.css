@@ -12,71 +12,86 @@
     
   }
 
-  #MainGallery{
+
+
+  #AutomonumentsPage{
     display: flex;
     /* background-color: yellow; */
     width: 110%;
     height: auto;
+    
+  }
+
+  .AutomonumentsHeader{
+    font-family: 'Quicksand', sans-serif;
+    writing-mode: vertical-lr;
+    
+
+    text-transform: uppercase;
+  
+    /* padding-bottom: 10px; */
   }
 
 
-  .cont {
+  .contAutomonument {
     position: relative;
     overflow: hidden;
     height: 100vh;
-    padding-top: 10px;
+    /* padding-top: 15px; */
     padding-right: 90px;
-    padding-bottom: 170px;
+    /* padding-bottom: 170px; */
     /* padding-left: 90px; */
-    width: 100%;
+    width: 110%;
     /* margin-top: 30px; */
     
   }
 
-  .cont__inner {
+  .contAutomonument__inner {
     position: relative;
     height: 100%;
     width: 100%;
   }
-  /* .cont__inner:hover .el__heading:nth-child(1){
+  /* .contAutomonument__inner:hover .elAutomonuments__heading:nth-child(1){
     display: none;
     transition: opacity 0.25s 0.25s;
 
   } */
-  .cont__inner:hover .el__bg:after {
+  .contAutomonument__inner:hover .elAutomonuments__bg:after {
     opacity: 1;
   }
-  .el {
+  .elAutomonuments {
+      display: flex;
+      justify-content: center;
     position: absolute;
     left: 0;
     top: 0;
-    width: 13%;
-    height: 100%;
+    width: 12%;
+    height: 600px;
     background: #ffffff;
     transition: transform 0.6s 0.7s, width 0.7s, opacity 0.6s 0.7s, z-index 0s 1.3s;
     will-change: transform, width, opacity;
   }
-  .el:not(.s--active) {
+  .elAutomonuments:not(.s--active) {
     cursor: pointer;
   }
-  .el__overflow {
+  .elAutomonuments__overflow {
     overflow: hidden;
     position: relative;
     height: 99%;
     
   }
-  .el__inner {
+  .elAutomonuments__inner {
     display: flex;
     justify-content: center;
     overflow: hidden;
     position: relative;
     height: 100%;
-    transition: transform 1s;
+    transition: transform 1.5s;
   }
-  .cont.s--inactive .el__inner {
+  .contAutomonument.s--inactive .elAutomonuments__inner {
     transform: translate3d(0, 100%, 0);
   }
-  .el__bg {
+  .elAutomonuments__bg {
     display: flex;
     justify-content: center;
     position: relative;
@@ -84,9 +99,11 @@
     height: 100%;
     transition: transform 0.6s 0.7s;
     will-change: transform;
-    margin-left: 50px;
+    /* margin-left: 50px; */
+    border: 1px solid black;
+
   }
-  .el__bg:before {
+  .elAutomonuments__bg:before {
     content: "";
     position: absolute;
     left: 0;
@@ -98,13 +115,13 @@
     transition: transform 1s;
     transform: translate3d(0, 0, 0) scale(1);
   }
-  .cont.s--inactive .el__bg:before {
+  .contAutomonument.s--inactive .elAutomonuments__bg:before {
     transform: translate3d(0, -100%, 0) scale(1.2);
   }
-  .el.s--active .el__bg:before {
+  .elAutomonuments.s--active .elAutomonuments__bg:before {
     transition: transform 0.8s;
   }
-  .el__bg:after {
+  .elAutomonuments__bg:after {
     content: "";
     z-index: 1;
     position: absolute;
@@ -115,11 +132,11 @@
     opacity: 0;
     transition: opacity 0.5s;
   }
-  .cont.s--el-active .el__bg:after {
+  .contAutomonument.s--elAutomonuments-active .elAutomonuments__bg:after {
     transition: opacity 0.5s 1.4s;
     opacity: 1 !important;
   }
-  .el__preview-cont {
+  .elAutomonuments__preview-contAutomonument {
     z-index: 2;
     display: flex;
     justify-content: center;
@@ -131,16 +148,16 @@
     height: 100%;
     transition: all 0.3s 1.2s;
   }
-  .cont.s--inactive .el__preview-cont {
+  .contAutomonument.s--inactive .elAutomonuments__preview-contAutomonument {
     opacity: 0;
     transform: translateY(10px);
   }
-  .cont.s--el-active .el__preview-cont {
+  .contAutomonument.s--elAutomonuments-active .elAutomonuments__preview-contAutomonument {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.5s;
   }
-  .el__heading {
+  /* .elAutomonuments__heading {
     color: #fff;
     text-transform: uppercase;
     font-size:   18px;
@@ -150,10 +167,10 @@
     opacity: 0.5;
     height: 70px;
     width: 100%;
-  }
+  } */
 
  
-  .el__content {
+  .elAutomonuments__content {
     z-index: -1;
     position: absolute;
     left: 0;
@@ -168,13 +185,13 @@
     writing-mode: vertical-lr;
 
   }
-  .el.s--active .el__content {
+  .elAutomonuments.s--active .elAutomonuments__content {
     z-index: 2;
     opacity: 1;
     pointer-events: auto;
     transition: all 0.5s 1.4s;
   }
-  .el__text {
+  .elAutomonuments__text {
     display: flex;
     text-transform: uppercase;
     font-size: 35px;
@@ -182,16 +199,16 @@
     font-family: 'Quicksand', sans-serif;
     /* writing-mode: vertical-rl; */
     background-color: white;
-    margin-top: -20px;
-    margin-left: -38px;
+    /* margin-top: -20px;
+    margin-left: 58px; */
     
   }
  
 
-  .el__close-btn {
+  .elAutomonuments__close-btn {
     z-index: -1;
     position: absolute;
-    right: -7px;
+    right: 230px;
     top: 10px;
     width: 60px;
     height: 60px;
@@ -199,14 +216,15 @@
     pointer-events: none;
     transition: all 0s 0.45s;
     cursor: pointer;
+    
   }
-  .el.s--active .el__close-btn {
+  .elAutomonuments.s--active .elAutomonuments__close-btn {
     z-index: 6;
     opacity: 1;
     pointer-events: auto;
     transition: all 0s 1.4s;
   }
-  .el__close-btn:before, .el__close-btn:after {
+  .elAutomonuments__close-btn:before, .elAutomonuments__close-btn:after {
     content: "";
     position: absolute;
     left: 0;
@@ -218,24 +236,24 @@
     opacity: 0;
     transition: opacity 0s;
   }
-  .el.s--active .el__close-btn:before, .el.s--active .el__close-btn:after {
+  .elAutomonuments.s--active .elAutomonuments__close-btn:before, .elAutomonuments.s--active .elAutomonuments__close-btn:after {
     opacity: 1;
   }
-  .el__close-btn:before {
+  .elAutomonuments__close-btn:before {
     transform: rotate(45deg) translateX(100%);
   }
-  .el.s--active .el__close-btn:before {
+  .elAutomonuments.s--active .elAutomonuments__close-btn:before {
     transition: all 0.3s 1.4s cubic-bezier(0.72, 0.09, 0.32, 1.57);
     transform: rotate(45deg) translateX(0);
   }
-  .el__close-btn:after {
+  .elAutomonuments__close-btn:after {
     transform: rotate(-45deg) translateX(100%);
   }
-  .el.s--active .el__close-btn:after {
+  .elAutomonuments.s--active .elAutomonuments__close-btn:after {
     transition: all 0.3s 1.55s cubic-bezier(0.72, 0.09, 0.32, 1.57);
     transform: rotate(-45deg) translateX(0);
   }
-  .el__index {
+  /* .elAutomonuments__index {
     overflow: hidden;
     position: absolute;
     left: 0;
@@ -250,40 +268,40 @@
     transition: transform 0.5s, opacity 0.3s 1.4s;
     transform: translate3d(1, 1vw, 0);
 
-  }
-  .el:hover .el__index {
+  } */
+  .elAutomonuments:hover .elAutomonuments__index {
     transform: translate3d(0, 0, 0);
   }
   
-  .cont.s--el-active .el__index {
+  .contAutomonument.s--elAutomonuments-active .elAutomonuments__index {
     transition: transform 0.5s, opacity 0.3s;
     opacity: 0;
   }
-  .el__index-back, .el__index-front {
+  .elAutomonuments__index-back, .elAutomonuments__index-front {
     position: absolute;
     left: 0;
     bottom: 20.5%;
     width: 100%;
   }
-  .el__index-back {
+  .elAutomonuments__index-back {
     color: #fff;
     opacity: 0;
     transition: opacity 0.25s 0.25s;
     writing-mode: vertical-lr;
 
   }
-  .el:hover .el__index-back {
+  .elAutomonuments:hover .elAutomonuments__index-back {
     transition: opacity 0.25s;
     opacity: 1;
   }
-  .el__index-overlay {
+  .elAutomonuments__index-overlay {
     overflow: hidden;
     position: relative;
     transform: translate3d(0, 100%, 0);
     transition: transform 0.5s 0.1s;
     color: transparent;
   }
-  /* .el__index-overlay:before {
+  /* .elAutomonuments__index-overlay:before {
     content: attr(data-index);
     position: absolute;
     left: 0;
@@ -295,32 +313,32 @@
     transform: translate3d(0, -100%, 0);
     transition: transform 0.5s 0.1s;
   } */
-  .el:hover .el__index-overlay {
+  .elAutomonuments:hover .elAutomonuments__index-overlay {
     transform: translate3d(0, -399%, 0);
   } 
-  .el:hover .el__index-overlay:before {
+  .elAutomonuments:hover .elAutomonuments__index-overlay:before {
     transform: translate3d(0, 0, 0);
   }
-  .el:hover .el__heading {
+  .elAutomonuments:hover .elAutomonuments__heading {
     display: none;
 }
  
-  .el:nth-child(1) {
+  .elAutomonuments:nth-child(1) {
     transform: translate3d(0%, 0, 0);
     transform-origin: 50% 50%;
   }
-  .cont.s--el-active .el:nth-child(1):not(.s--active) {
+  .contAutomonument.s--elAutomonuments-active .elAutomonuments:nth-child(1):not(.s--active) {
     transform: scale(0.5) translate3d(0%, 0, 0);
     opacity: 0;
     transition: transform 0.95s, opacity 0.95s;
   }
-  .el:nth-child(1) .el__inner {
+  .elAutomonuments:nth-child(1) .elAutomonuments__inner {
     transition-delay: 0s;
   }
-  .el:nth-child(1) .el__bg {
-    transform: translate3d(30%, 0, 0);
+  .elAutomonuments:nth-child(1) .elAutomonuments__bg {
+    transform: translate3d(24%, 0, 0);
   }
-  .el:nth-child(1) .el__heading {
+  /* .elAutomonuments:nth-child(1) .elAutomonuments__heading {
     color: rgb(173, 176, 9);
     text-transform: uppercase;
     font-size: 80px;
@@ -332,31 +350,31 @@
     margin-top: 300px;
     margin-left: 54%;
     font-family: 'Quicksand', sans-serif;
-  }
+  } */
   
-  .el:nth-child(1) .el__bg:before {
+  .elAutomonuments:nth-child(1) .elAutomonuments__bg:before {
     transition-delay: 0s;
     /* background-image: url("../../assets/Works/Ashokan/untitled15.jpg"); */
     background-size: contain;
     background-repeat: no-repeat;
   }
-  .el:nth-child(2) {
+  .elAutomonuments:nth-child(2) {
     transform: translate3d(105.20833%, 0, 0);
     transform-origin: 155.20833% 50%;
   }
-  .cont.s--el-active .el:nth-child(2):not(.s--active) {
+  .contAutomonument.s--elAutomonuments-active .elAutomonuments:nth-child(2):not(.s--active) {
     transform: scale(0.5) translate3d(105.20833%, 0, 0);
     opacity: 0;
     transition: transform 0.95s, opacity 0.95s;
   }
-  .el:nth-child(2) .el__inner {
+  .elAutomonuments:nth-child(2) .elAutomonuments__inner {
     transition-delay: 0.1s;
   }
-  .el:nth-child(2) .el__bg {
+  .elAutomonuments:nth-child(2) .elAutomonuments__bg {
     transform: translate3d(27.2%, 0, 0);
   }
 
-  .el:nth-child(2) .el__heading {
+  /* .elAutomonuments:nth-child(2) .elAutomonuments__heading {
     color: rgb(173, 176, 9);
     text-transform: uppercase;
     font-size: 80px;
@@ -368,8 +386,8 @@
     margin-top: 300px;
     font-family: 'Quicksand', sans-serif;
 
-  }
-  .el:nth-child(2) .el__bg:before {
+  } */
+  .elAutomonuments:nth-child(2) .elAutomonuments__bg:before {
     display: flex;
     justify-content: center;
     /* border: 2px solid black; */
@@ -380,34 +398,34 @@
     
     
   }
-  .el:nth-child(3) {
+  .elAutomonuments:nth-child(3) {
     transform: translate3d(210.41667%, 0, 0);
     transform-origin: 260.41667% 50%;
     /* margin-left: 90px; */
     /* width: 100%; */
   }
 
-  .cont.s--el-active .el:nth-child(3):not(.s--active) {
+  .contAutomonument.s--elAutomonuments-active .elAutomonuments:nth-child(3):not(.s--active) {
     transform: scale(0.5) translate3d(210.41667%, 0, 0);
     opacity: 0;
     transition: transform 0.95s, opacity 0.95s;
   
   }
 
-  .el:nth-child(3) .el__inner {
+  .elAutomonuments:nth-child(3) .elAutomonuments__inner {
     transition-delay: 0.2s;
       
   }
-  .el:nth-child(3) .el__bg {
+  .elAutomonuments:nth-child(3) .elAutomonuments__bg {
     transform: translate3d(4.4%, 0, 0);
     /* margin-left: -20px; */
-    margin-left: 120px;
+    /* margin-left: 120px; */
     /* margin-left: 410px; */
     /* height: 100%;
     width: 50%;  */
     
   }
-  .el:nth-child(3) .el__heading {
+  /* .elAutomonuments:nth-child(3) .elAutomonuments__heading {
     color: rgb(173, 176, 9);
     text-transform: uppercase;
     font-size: 80px;
@@ -420,29 +438,29 @@
     margin-left: 20%;
     font-family: 'Quicksand', sans-serif;
 
-  }
-  .el:nth-child(3) .el__bg:before {
+  } */
+  .elAutomonuments:nth-child(3) .elAutomonuments__bg:before {
     transition-delay: 0.2s;
     /* background-image: url("../../assets/Works/Boswijck/NR-Boswijck-09.jpg"); */
     background-size: contain;
     background-repeat: no-repeat;
   }
-  .el:nth-child(4) {
+  .elAutomonuments:nth-child(4) {
     transform: translate3d(315.625%, 0, 0);
     transform-origin: 365.625% 50%;
   }
-  .cont.s--el-active .el:nth-child(4):not(.s--active) {
+  .contAutomonument.s--elAutomonuments-active .elAutomonuments:nth-child(4):not(.s--active) {
     transform: scale(0.5) translate3d(315.625%, 0, 0);
     opacity: 0;
     transition: transform 0.95s, opacity 0.95s;
   }
-  .el:nth-child(4) .el__inner {
+  .elAutomonuments:nth-child(4) .elAutomonuments__inner {
     transition-delay: 0.3s;
   }
-  .el:nth-child(4) .el__bg {
+  .elAutomonuments:nth-child(4) .elAutomonuments__bg {
     transform: translate3d(-20.6%, 0, 0);
   }
-  .el:nth-child(4) .el__heading {
+  /* .elAutomonuments:nth-child(4) .elAutomonuments__heading {
     color: rgb(173, 176, 9);
     text-transform: uppercase;
     font-size: 80px;
@@ -454,29 +472,29 @@
     margin-top: 300px;
     font-family: 'Quicksand', sans-serif;
 
-  }
-  .el:nth-child(4) .el__bg:before {
+  } */
+  .elAutomonuments:nth-child(4) .elAutomonuments__bg:before {
     transition-delay: 0.3s;
     /* background-image: url("../../assets/Works/TLV/C8B0107-2.jpg"); */
     background-size: contain;
     background-repeat: no-repeat;
   }
-  .el:nth-child(5) {
+  .elAutomonuments:nth-child(5) {
     transform: translate3d(420.83333%, 0, 0);
     transform-origin: 470.83333% 50%;
   }
-  .cont.s--el-active .el:nth-child(5):not(.s--active) {
+  .contAutomonument.s--elAutomonuments-active .elAutomonuments:nth-child(5):not(.s--active) {
     transform: scale(0.5) translate3d(420.83333%, 0, 0);
     opacity: 0;
     transition: transform 0.95s, opacity 0.95s;
   }
-  .el:nth-child(5) .el__inner {
+  .elAutomonuments:nth-child(5) .elAutomonuments__inner {
     transition-delay: 0.4s;
   }
-  .el:nth-child(5) .el__bg {
+  .elAutomonuments:nth-child(5) .elAutomonuments__bg {
     transform: translate3d(-27.8%, 0, 0);
   }
-  .el:nth-child(5) .el__heading {
+  /* .elAutomonuments:nth-child(5) .elAutomonuments__heading {
     color: rgb(173, 176, 9);
     text-transform: uppercase;
     font-size: 75px;
@@ -489,29 +507,29 @@
     margin-left: 13%;
     font-family: 'Quicksand', sans-serif;
 
-  }
-  .el:nth-child(5) .el__bg:before {
+  } */
+  .elAutomonuments:nth-child(5) .elAutomonuments__bg:before {
     transition-delay: 0.4s;
     /* background-image: url("../../assets/Commercial/1/Brooklyn_Residential/766LafayetteAve-01.jpg"); */
     background-size: contain;
     background-repeat: no-repeat;
   }
-  .el:nth-child(6) {
+  .elAutomonuments:nth-child(6) {
     transform: translate3d(525.83333%, 0, 0);
     transform-origin: 520.83333% 50%;
   }
-  .cont.s--el-active .el:nth-child(6):not(.s--active) {
+  .contAutomonument.s--elAutomonuments-active .elAutomonuments:nth-child(6):not(.s--active) {
     transform: scale(0.5) translate3d(420.83333%, 0, 0);
     opacity: 0;
     transition: transform 0.95s, opacity 0.95s;
   }
-  .el:nth-child(6) .el__inner {
+  .elAutomonuments:nth-child(6) .elAutomonuments__inner {
     transition-delay: 0.2s;
   }
-  .el:nth-child(6) .el__bg {
+  .elAutomonuments:nth-child(6) .elAutomonuments__bg {
     transform: translate3d(-5.4%, 0, 0);
   }
-  .el:nth-child(6) .el__heading {
+  /* .elAutomonuments:nth-child(6) .elAutomonuments__heading {
     color: rgb(173, 176, 9);
     text-transform: uppercase;
     font-size: 75px;
@@ -523,28 +541,28 @@
     margin-bottom: 270px;
     font-family: 'Quicksand', sans-serif;
 
-  }
-  .el:nth-child(6) .el__bg:before {
+  } */
+  .elAutomonuments:nth-child(6) .elAutomonuments__bg:before {
     transition-delay: 0.2s;
     /* background-image: url("../../assets/Commercial/1/Tel_Aviv_Residential/C8B1042-s.jpg"); */
   }
 
-  .el:nth-child(7) {
+  .elAutomonuments:nth-child(7) {
     transform: translate3d(630.83333%, 0, 0);
     transform-origin: 470.83333% 50%;
   }
-  .cont.s--el-active .el:nth-child(7):not(.s--active) {
+  .contAutomonument.s--elAutomonuments-active .elAutomonuments:nth-child(7):not(.s--active) {
     transform: scale(0.5) translate3d(420.83333%, 0, 0);
     opacity: 0;
     transition: transform 0.95s, opacity 0.95s;
   }
-  .el:nth-child(7) .el__inner {
+  .elAutomonuments:nth-child(7) .elAutomonuments__inner {
     transition-delay: 0.1s;
   }
-  .el:nth-child(7) .el__bg {
-    transform: translate3d(31.2%, 0, 0);
+  .elAutomonuments:nth-child(7) .elAutomonuments__bg {
+    transform: translate3d(-10.2%, 0, 0);
   }
-  .el:nth-child(7) .el__heading {
+  /* .elAutomonuments:nth-child(7) .elAutomonuments__heading {
     color: rgb(173, 176, 9);
     text-transform: uppercase;
     font-size: 75px;
@@ -556,8 +574,8 @@
     margin-bottom: 270px;
     font-family: 'Quicksand', sans-serif;
 
-  }
-  .el:nth-child(7) .el__bg:before {
+  } */
+  .elAutomonuments:nth-child(7) .elAutomonuments__bg:before {
     transition-delay: 0.1s;
     /* background-image: url("../../assets/Commercial/2/12_Chairs_Cafe/NR_03-C8B3023.jpg"); */
     background-size: contain;
@@ -565,22 +583,22 @@
   }
 
 
-  .el:nth-child(8) {
+  .elAutomonuments:nth-child(8) {
     transform: translate3d(735.83333%, 0, 0);
     transform-origin: 470.83333% 50%;
   }
-  .cont.s--el-active .el:nth-child(8):not(.s--active) {
+  .contAutomonument.s--elAutomonuments-active .elAutomonuments:nth-child(8):not(.s--active) {
     transform: scale(0.5) translate3d(420.83333%, 0, 0);
     opacity: 0;
     transition: transform 0.95s, opacity 0.95s;
   }
-  .el:nth-child(8) .el__inner {
+  .elAutomonuments:nth-child(8) .elAutomonuments__inner {
     transition-delay: 0.4s;
   }
-  .el:nth-child(8) .el__bg {
+  .elAutomonuments:nth-child(8) .elAutomonuments__bg {
     transform: translate3d(-16.8%, 0, 0);
   }
-  .el:nth-child(8) .el__heading {
+  /* .elAutomonuments:nth-child(8) .elAutomonuments__heading {
     color: rgb(173, 176, 9);
     text-transform: uppercase;
     font-size: 75px;
@@ -593,27 +611,63 @@
     margin-left: 5%;
     font-family: 'Quicksand', sans-serif;
 
-  }
-  .el:nth-child(8) .el__bg:before {
+  } */
+  .elAutomonuments:nth-child(8) .elAutomonuments__bg:before {
     transition-delay: 0.4s;
     /* background-image: url("../../assets/Commercial/2/Tripple_Crown_Salon/NR_C8B3379-s.jpg"); */
     background-size: contain;
     background-repeat: no-repeat;
   }
-  .el:hover .el__bg:after {
+
+/* 
+  .elAutomonuments:nth-child(9) {
+    transform: translate3d(842.83333%, 0, 0);
+    transform-origin: 470.83333% 50%;
+  }
+  .contAutomonument.s--elAutomonuments-active .elAutomonuments:nth-child(9):not(.s--active) {
+    transform: scale(0.5) translate3d(420.83333%, 0, 0);
+    opacity: 0;
+    transition: transform 0.95s, opacity 0.95s;
+  }
+  .elAutomonuments:nth-child(9) .elAutomonuments__inner {
+    transition-delay: 0.4s;
+  }
+  .elAutomonuments:nth-child(9) .elAutomonuments__bg {
+    transform: translate3d(-26.8%, 0, 0);
+  } */
+  /* .elAutomonuments:nth-child(9) .elAutomonuments__heading {
+    color: rgb(173, 176, 9);
+    text-transform: uppercase;
+    font-size: 75px;
+    transform: rotate3d(90);
+    background-color: #3f39398e;
+    opacity: 0.9;
+    height: 90px;
+    width: 110%;
+    margin-bottom: 270px;
+    margin-left: 5%;
+    font-family: 'Quicksand', sans-serif;
+
+  } */
+
+  .elAutomonuments:hover .elAutomonuments__bg:after {
     opacity: 0;
   }
-  .el.s--active {
+  .elAutomonuments.s--active {
     z-index: 1;
     width: 100%;
     transform: translate3d(0, 0, 0);
     transition: transform 0.6s, width 0.7s 0.7s, z-index 0s;
   }
-  .el.s--active .el__bg {
+
+  .slider-control-bottomcenter  {
+      display: none;
+  }
+  .elAutomonuments.s--active .elAutomonuments__bg {
     transform: translate3d(0, 0, 0);
     transition: transform 0.6s;
   }
-  .el.s--active .el__bg:before {
+  .elAutomonuments.s--active .elAutomonuments__bg:before {
     transition-delay: 0.6s;
     transform: scale(0.8);
   }
@@ -630,3 +684,65 @@
 /* #paddingMain{
   margin-left: 100px;
 } */
+
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* ----------------------------------------------
+ * Generated by Animista on 2018-8-14 17:35:25
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  

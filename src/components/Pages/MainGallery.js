@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './MainGallery.css';
 import untitled15 from '../../assets/Works/Ashokan/untitled15.jpg'
-import Artbridge3 from '../../assets/Works/Automonuments/Artbridge3.jpg'
+import Automonument01 from '../../assets/Works/Automonuments/Automonument01.jpg'
 import NR_Boswijck_09 from '../../assets/Works/Boswijck/NR_Boswijck_09.jpg'
 import C8B0107_2 from '../../assets/Works/TLV/C8B0107_2.jpg'
 import LafayetteAve766_01 from '../../assets/Commercial/1/Brooklyn_Residential/LafayetteAve766_01.jpg'
@@ -12,6 +12,13 @@ import NR_C8B3379_s from '../../assets/Commercial/2/Tripple_Crown_Salon/NR_C8B33
 // import { Carousel } from "react-responsive-carousel";
 // import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 // import AutomonumentsCarousels from '../Carousels/AutomonumentsCarousels'
+import {
+  BrowserRouter as 
+  Router,
+  Route,
+  Link
+} from 'react-router-dom'
+
 
 class MainGallery extends Component {
       componentDidMount() {
@@ -42,11 +49,6 @@ class MainGallery extends Component {
         // this.ed.innerHTML = this.props.text;
       }
     render() {
-
-
-
-
-
         return (
           <div id="MainGallery" className="container">
             <div id="cont" className="cont s--inactive" ref={ref => this.cont = ref}>
@@ -62,7 +64,10 @@ class MainGallery extends Component {
           </div>
           <div className="el__content">
             <div className="el__text">Ashokan</div>
-            <a href="/FineArt" className="btn" id="button" value="More">MORE</a> 
+            {/* <Link className="btn" id="button" to={`${match.path}/Ashokan`}>Ashokan</Link> */}
+            <Link to={`FineArt/Ashokan`} >Ashokan</Link>
+
+            {/* <a className="btn" id="button" value="More" href="/FineArt/Ashokan">MORE</a>  */}
             <div className="el__close-btn"></div>
           </div>
           <div  id="moreAshokan" className="el__text">
@@ -85,7 +90,7 @@ class MainGallery extends Component {
       <div className="el__overflow">
         <div className="el__inner">
        <div className="el__bg">  
-        <img  src={Artbridge3} alt="Artbridge3"/>
+        <img  src={Automonument01} alt="Automonument01"/>
         </div>
           <div className="el__preview-cont">
             <h2 className="el__heading">NE</h2>
@@ -99,7 +104,7 @@ class MainGallery extends Component {
       <div className="el__index">
         <div className="el__index-back">Automonuments</div>
         <div className="el__index-front">
-          <div className="el__index-overlay" data-index="Automonuments">Automonuments</div>
+          <div className="el__index-overlay" data-index="Automonument01">Automonuments</div>
         </div>
       </div>
     </div>

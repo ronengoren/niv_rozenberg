@@ -9,6 +9,8 @@ import './App.css';
 // import AutomonumentsPage from './components/Pages/FineArtPages/AutomonumentsPage'
 import HomePage from './components/Pages/HomePage'
 import FineArtMain from './components/Pages/FineArtPages/FineArtMain'
+// import AshokanPage from './components/Pages/FineArtPages/AshokanPage'
+
 // import untitled1 from './assets/Works/Ashokan/untitled1.jpg'
 // import AshokanCarousels from './components/Carousels/AshokanCarousels'
 
@@ -89,7 +91,6 @@ const App = () => (
 
       {/* <Route path="/Automonuments" component={AutomonumentsPage}/> */}
       {/* <Route path="/topics" component={Topics}/> */}
-      <h1  className="text-left"><Link to={"/FineArt"} id="FineArtLink">FINE ART</Link></h1>
 
     </div>
   </Router>
